@@ -1,7 +1,7 @@
 <?php include('header.php');?> <!--include encabezado-->
 
 <?php 
-$csv = array_map('str_getcsv', file('https://raw.githubusercontent.com/FernandaVargasC/clase_10_ejercicio/master/data/top10-animacion.csv')); # ir a buscar un csv
+$csv = array_map('str_getcsv', file('https://raw.githubusercontent.com/FernandaVargasC/clase_10/master/data/top10-animacion.csv')); # ir a buscar un csv
       array_walk($csv, function(&$a) use ($csv) { #transformarlo para que la primera linea lo entienda por encabezado
       $a = array_combine($csv[0], $a);
       });
